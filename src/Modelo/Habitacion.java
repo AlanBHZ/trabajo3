@@ -6,56 +6,79 @@
 package Modelo;
 
 public class Habitacion {
-    private int numero_habitacion;
-    private String hora_entrada;
-    private String hora_salida;
-    private double importe_a_pagar;
+    private int numero;
+    private int entrada;//Hora actual / Hora del sistema
+    private int salida; //
+    private double precio;
+    private boolean disponibilidad;
 
-    public Habitacion(int numero_habitacion, String hora_entrada, String hora_salida, double importe_a_pagar) {
-        this.numero_habitacion = numero_habitacion;
-        this.hora_entrada = hora_entrada;
-        this.hora_salida = hora_salida;
-        this.importe_a_pagar = importe_a_pagar;
+    
+    public Habitacion(int numero, int entrada, int salida, double precio, boolean disponibilidad) {
+        this.numero = numero;
+        this.entrada = entrada;
+        this.salida = salida;
+        this.precio = precio;
+        this.disponibilidad = disponibilidad;
     }
 
     public Habitacion() {
-        this.numero_habitacion = 0;
-        this.hora_entrada = null;
-        this.hora_salida = null;
-        this.importe_a_pagar = 0;
+        this.numero = 0;
+        this.entrada = 0;
+        this.salida = 0;
+        this.precio = 0;
+        this.disponibilidad = true;
     }
 
-    public int getNumero_habitacion() {
-        return numero_habitacion;
+    public int getNumero() {
+        return numero;
     }
 
-    public void setNumero_habitacion(int numero_habitacion) {
-        this.numero_habitacion = numero_habitacion;
+    public void setNumero(int numero) {
+        this.numero = numero;
     }
 
-    public String getHora_entrada() {
-        return hora_entrada;
+    public int getEntrada() {
+        return entrada;
     }
 
-    public void setHora_entrada(String hora_entrada) {
-        this.hora_entrada = hora_entrada;
+    public void setEntrada(int entrada) {
+        this.entrada = entrada;
     }
 
-    public String getHora_salida() {
-        return hora_salida;
+    public int getSalida() {
+        return salida;
     }
 
-    public void setHora_salida(String hora_salida) {
-        this.hora_salida = hora_salida;
+    public void setSalida(int salida) {
+        this.salida = salida;
     }
 
-    public double getImporte_a_pagar() {
-        return importe_a_pagar;
+    public double getPrecio() {
+        return precio;
     }
 
-    public void setImporte_a_pagar(double importe_a_pagar) {
-        this.importe_a_pagar = importe_a_pagar;
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
+    public boolean isDisponibilidad() {
+        return disponibilidad;
+    }
+
+    public void setDisponibilidad(boolean disponibilidad) {
+        this.disponibilidad = disponibilidad;
     }
     
+    public String mostrarDisponibilidad(){
+        if(isDisponibilidad()){
+            return "Disponible";
+        }
+        else{
+            return "Ocupada";
+        }
+    }
+    @Override
+    public String toString() {
+        return "Habitacion{" + "numero=" + numero + ", entrada=" + entrada + ", salida=" + salida + ", precio=" + precio + ", disponibilidad=" + mostrarDisponibilidad() + '}';
+    }
     
 }

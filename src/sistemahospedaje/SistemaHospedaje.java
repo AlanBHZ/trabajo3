@@ -5,6 +5,8 @@
  */
 package sistemahospedaje;
 
+import Controlador.Control;
+
 /**
  *
  * @author Familia Niño
@@ -15,7 +17,8 @@ public class SistemaHospedaje {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Control c = new Control();
+        c.iniciar();
     }
     
 }
