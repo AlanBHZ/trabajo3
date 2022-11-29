@@ -108,18 +108,6 @@ public class Archivo {
         return reporte;
     }
 
-    public void insertar(String nombre) {
-
-    }
-
-    public void ordenar(String nombre) {
-
-    }
-
-    public void eliminar(String nombre) {
-
-    }
-
     public boolean eliminarArchivo(String nombre) {
         File f = new File(nombre + ".txt");
         if (f.exists()) {
@@ -159,7 +147,6 @@ public class Archivo {
                 Habitacion hab = new Habitacion();
                 hab.setNumero(Integer.parseInt(data[1]));
                 hab.setEntrada(Integer.parseInt(data[9]));
-
                 hab.setPrecio(Integer.parseInt(data[11]));
                 reporte.add(hab);
                 System.out.println(hab.getNumero() + " " + hab.getEntrada() + " "

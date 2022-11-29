@@ -77,5 +77,4 @@ public class Hospedaje {
     public String toString() {
         return "Hospedaje{" + "lista=" + lista + ", cantidad=" + cantidad + '}';
     }
-
 }

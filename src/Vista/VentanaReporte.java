@@ -117,6 +117,8 @@ public class VentanaReporte extends javax.swing.JFrame {
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Buscar");
 
+        txtRecaudo.setEnabled(false);
+
         jLabel3.setText("Recaudo total");
 
         cmbReserva.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Habitación", "Horas", "Total por horas" }));
