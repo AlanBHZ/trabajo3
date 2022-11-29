@@ -1,0 +1,6 @@
+Numero_habitación,3,Fecha,29/11/2022,Hora_de_inicio,01:46:14,Hora_de_salida,06:46:14,Hora_estadia,5,Precio_final,100
+Numero_habitación,1,Fecha,28/11/2022,Hora_de_inicio,22:31:08,Hora_de_salida,18:31:08,Hora_estadia,68,Precio_final,1360
+Numero_habitación,1,Fecha,28/11/2022,Hora_de_inicio,21:03:10,Hora_de_salida,02:03:10,Hora_estadia,5,Precio_final,100
+Numero_habitación,1,Fecha,28/11/2022,Hora_de_inicio,21:02:46,Hora_de_salida,22:02:46,Hora_estadia,1,Precio_final,15
+Numero_habitación,3,Fecha,28/11/2022,Hora_de_inicio,20:30:07,Hora_de_salida,21:30:07,Hora_estadia,1,Precio_final,15
+Numero_habitación,2,Fecha,28/11/2022,Hora_de_inicio,20:29:56,Hora_de_salida,21:29:56,Hora_estadia,1,Precio_final,15
