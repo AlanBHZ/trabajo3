@@ -59,14 +59,14 @@ public class VentanaReporte extends javax.swing.JFrame {
 
             },
             new String [] {
-                "# de Reserva", "# de Habitación", "Horas reservada", "Total por horas"
+                "# de Habitación", "Horas reservada", "Total por horas"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, true
+                false, false, true
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -119,7 +119,7 @@ public class VentanaReporte extends javax.swing.JFrame {
 
         jLabel3.setText("Recaudo total");
 
-        cmbReserva.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Reserva", "Habitación", "Horas", "Total por horas" }));
+        cmbReserva.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Habitación", "Horas", "Total por horas" }));
 
         btnBuscar.setText("Buscar");
 

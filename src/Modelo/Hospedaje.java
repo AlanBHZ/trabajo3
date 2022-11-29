@@ -36,7 +36,7 @@ public class Hospedaje {
         this.cantidad = cantidad;
     }
 
-    public void precio() {
+    public void precio(int n) {
         for (int i = 0; i < lista.getLista().size(); i++) {
             int horas = lista.getLista().get(i).getSalida() - lista.getLista().get(i).getEntrada();
             if (lista.getCategoria().equals("Barata")) {

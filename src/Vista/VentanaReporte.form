@@ -133,12 +133,33 @@
         <Component class="javax.swing.JTable" name="tblBusqueda">
           <Properties>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-              <Table columnCount="4" rowCount="0">
-                <Column editable="false" title="# de Reserva" type="java.lang.String"/>
+              <Table columnCount="3" rowCount="0">
                 <Column editable="false" title="# de Habitaci&#xf3;n" type="java.lang.String"/>
                 <Column editable="false" title="Horas reservada" type="java.lang.String"/>
                 <Column editable="true" title="Total por horas" type="java.lang.String"/>
               </Table>
+            </Property>
+            <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+              <TableColumnModel selectionModel="0">
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+              </TableColumnModel>
+            </Property>
+            <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+              <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
             </Property>
           </Properties>
         </Component>
@@ -185,11 +206,10 @@
     <Component class="javax.swing.JComboBox" name="cmbReserva">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="4">
-            <StringItem index="0" value="Reserva"/>
-            <StringItem index="1" value="Habitaci&#xf3;n"/>
-            <StringItem index="2" value="Horas"/>
-            <StringItem index="3" value="Total por horas"/>
+          <StringArray count="3">
+            <StringItem index="0" value="Habitaci&#xf3;n"/>
+            <StringItem index="1" value="Horas"/>
+            <StringItem index="2" value="Total por horas"/>
           </StringArray>
         </Property>
       </Properties>
