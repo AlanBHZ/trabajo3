@@ -184,25 +184,34 @@ public class Control implements ActionListener {
     public void buscar() {
         Archivo archivo = new Archivo();
         Cliente cliente = archivo.clientes();
+        System.out.println("Arbol");
         cliente.imprimirArbol();
+        System.out.println("Tabla");
         cliente.imprimirTablaHash();
-        String key = buscar.getTxtApellido().getText() + " " + buscar.getTxtNombre().getText();
+        String key = buscar.getTxtNombre().getText() + " " + buscar.getTxtApellido().getText();
         if (cliente.getClientes().containsKey(key) || !cliente.buscarClienteArbol(key).isEmpty()) {
+            String[] dato;
             DefaultTableModel tabla = new DefaultTableModel();
-            String[] datos;
-            if(buscar.getRadioHash().isSelected()){
-                datos = cliente.buscarClienteHash(key).split(":");
+            String[] fila = new String[4];
+            tabla.addColumn("Nombre");
+            tabla.addColumn("Apellido");
+            tabla.addColumn("Telefono");
+            tabla.addColumn("Género");
+            if (buscar.getRadioHash().isSelected()) {
+                dato = cliente.buscarClienteHash(key).split(" ");
+            } else {
+                dato = cliente.buscarClienteArbol(key).split(" ");
             }
-            else{
-                datos = cliente.buscarClienteArbol(key).split(":");
+            int i = 0;
+            for (String dato1 : dato) {
+                fila[i] = dato1;
+                i++;
             }
-            String[] fila = datos[1].split(" ");
             tabla.addRow(fila);
             buscar.getTblCliente().setModel(tabla);
-        }
-        else{
+        } else {
             JOptionPane.showMessageDialog(null, "No se encontró el cliente buscado",
-                        "Búsqueda Fallida", JOptionPane.INFORMATION_MESSAGE);
+                    "Búsqueda Fallida", JOptionPane.INFORMATION_MESSAGE);
         }
     }
 

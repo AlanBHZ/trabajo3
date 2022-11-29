@@ -30,11 +30,23 @@ class BinarySearchTree {
     }
 
     public String search(String key) {
-        if (this.root == null) {
+        return searchRec(root, key);
+    }
+
+    //Metodo para buscar recursivamente
+    String searchRec(Node root, String key) {
+        if (root == null) {
             return null;
-        } else {
-            return this.root.search(key);
         }
+        if (key.equals(root.getKey())) {
+            return root.getValue();
+        }
+
+        if (key.compareTo(root.getKey()) < 0) {
+            return searchRec(root.getLeft(), key);
+        }
+
+        return searchRec(root.getRight(), key);
     }
 
     public void imprimirArbol(Node node) {

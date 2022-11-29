@@ -121,7 +121,7 @@ public class VentanaReporte extends javax.swing.JFrame {
 
         jLabel3.setText("Recaudo total");
 
-        cmbReserva.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Habitación", "Horas", "Total por horas" }));
+        cmbReserva.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Habitación", "Horas" }));
 
         btnBuscar.setText("Buscar");
 
